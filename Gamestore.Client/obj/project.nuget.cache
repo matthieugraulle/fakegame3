@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NMTjRrDUAzNF97mZzvDDFat/6Hcqe3KaONIg/FbK/F0NOVDByEXGl+pP127km+brcnG5SGLoL7FjhTojkkqAPg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\107098706\\source\\repos\\gamestore\\Gamestore.Client\\Gamestore.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\107098706\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}
