@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gamestoreapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gamestoreapi
+  template:
+    metadata:
+      labels:
+        app: gamestoreapi 
+    spec:
+      containers:
+        - name: gamestoreapi 
+          image: gamestoreacr.azurecr.io/gamestoreapi
+          ports:
+          - containerPort: 80
