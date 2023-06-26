@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- mgr-test
+- mgrr-test
 
 resources:
 - repo: self
@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '976f3ced-fb80-48b2-9814-ab53d80ad4a9'
   imageRepository: 'gamestorerundevops'
   containerRegistry: 'gamestoreacr.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/gamestore/Gamestore.API/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/Game/Gamestore.API/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
