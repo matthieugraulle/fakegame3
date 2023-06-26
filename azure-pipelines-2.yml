@@ -71,7 +71,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/game.yml
+                $(Pipeline.Workspace)/manifests/gamestoreapi.yml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
