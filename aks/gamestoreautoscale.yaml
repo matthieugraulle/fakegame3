@@ -1,0 +1,38 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: gamestoreapi-hpa
+spec:
+  maxReplicas: 10 
+  minReplicas: 3 
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: gamestoreapi-deployment
+  targetCPUUtilizationPercentage: 50 
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: gamestoreclient-hpa
+spec:
+  maxReplicas: 10 
+  minReplicas: 3  
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: gamestoreclient-deployment
+  targetCPUUtilizationPercentage: 50
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: mongo-hpa
+spec:
+  maxReplicas: 6 
+  minReplicas: 3  
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: mongo-deployment
+  targetCPUUtilizationPercentage: 50  
