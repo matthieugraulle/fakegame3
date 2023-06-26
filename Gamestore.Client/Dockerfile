@@ -9,7 +9,7 @@ WORKDIR /src
 COPY ["Gamestore.Client/Gamestore.Client.csproj", "Gamestore.Client/"]
 RUN dotnet restore "Gamestore.Client/Gamestore.Client.csproj"
 COPY . .
-WORKDIR "/src/Gamestore.Client"
+WORKDIR /src/Gamestore.Client
 RUN dotnet build "Gamestore.Client.csproj" -c Release -o /app/build
 
 FROM build AS publish

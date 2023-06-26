@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NMTjRrDUAzNF97mZzvDDFat/6Hcqe3KaONIg/FbK/F0NOVDByEXGl+pP127km+brcnG5SGLoL7FjhTojkkqAPg==",
+  "dgSpecHash": "l8ZkoRHSIWlw9p2y+xEQYDjwv3SiibRpIea3cQdnPTKwEWlnLemE3iSHQPN/Ha/lTGlc3qdj6EtcGoF3FTLT8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\107098706\\source\\repos\\gamestore\\Gamestore.Client\\Gamestore.Client.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\107098706\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+    "C:\\Users\\107098706\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
+    "C:\\Users\\107098706\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

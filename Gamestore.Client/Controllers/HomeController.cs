@@ -1,11 +1,12 @@
-﻿using Gamestore.Client.Data;
-using Gamestore.Client.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Gamestore.Client.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Gamestore.Client.Controllers
@@ -13,15 +14,20 @@ namespace Gamestore.Client.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly HttpClient _httpClient;
+        public HomeController(IHttpClientFactory httpClientFactory, ILogger<HomeController> logger)
         {
-            _logger = logger;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _httpClient = httpClientFactory.CreateClient("GamestoreAPIClient");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(ProductContext.Products);
+            var response = await _httpClient.GetAsync("/product");
+            var content = await response.Content.ReadAsStringAsync();
+            var productList = JsonConvert.DeserializeObject<IEnumerable<Product>>(content);
+
+            return View(productList);
         }
 
         public IActionResult Privacy()
@@ -29,7 +35,7 @@ namespace Gamestore.Client.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

@@ -9,6 +9,7 @@ C:\Users\107098706\source\repos\gamestore\Gamestore.Client\bin\Debug\net5.0\ref\
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\bin\Debug\net5.0\Gamestore.Client.pdb
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\bin\Debug\net5.0\Gamestore.Client.Views.dll
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\bin\Debug\net5.0\Gamestore.Client.Views.pdb
+C:\Users\107098706\source\repos\gamestore\Gamestore.Client\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.csproj.AssemblyReference.cache
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.AssemblyInfoInputs.cache
@@ -33,8 +34,8 @@ C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Razo
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.RazorTargetAssemblyInfo.cache
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.RazorTargetAssemblyInfo.cs
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.Views.pdb
+C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.csproj.CopyComplete
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.dll
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\ref\Gamestore.Client.dll
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.pdb
 C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.genruntimeconfig.cache
-C:\Users\107098706\source\repos\gamestore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.csproj.CopyComplete
