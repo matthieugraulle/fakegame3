@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  gamestore.api:
+    image: ${DOCKER_REGISTRY-}gamestoreapi
+    build:
+      context: .
+      dockerfile: Gamestore.API/Dockerfile
+
+  gamestore.client:
+    image: ${DOCKER_REGISTRY-}gamestoreclient
+    build:
+      context: .
+      dockerfile: Gamestore.Client/Dockerfile
+
+  
+  gamestore.db:
+    image: mongo
