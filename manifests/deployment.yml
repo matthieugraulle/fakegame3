@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: matthieugraullefakegame 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: matthieugraullefakegame
+  template:
+    metadata:
+      labels:
+        app: matthieugraullefakegame 
+    spec:
+      containers:
+        - name: matthieugraullefakegame 
+          image: gamestoreacr.azurecr.io/matthieugraullefakegame
+          ports:
+          - containerPort: 80
