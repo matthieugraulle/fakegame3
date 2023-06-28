@@ -1,0 +1,89 @@
+Start Docker Images
+run  = docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+stop = docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+--
+See images
+docker images
+
+See running containers
+docker ps
+--
+Stop Running Containers
+stop = docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+-- --
+
+az version
+--
+az login
+--
+Create a resource group
+az group create --name ResourceGroup --location westeurope
+--
+Create an Azure Container Registry
+az acr create --resource-group ResourceGroup --name gamestoreacr --sku Basic
+--
+Enable Admin Account for ACR Pull
+az acr update -n gamestoreacr --admin-enabled true
+--
+Log in to the container registry
+az acr login --name gamestoreacr
+Login Succeeded
+--
+Tag a container image
+
+get the login server address
+az acr list --resource-group ResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+
+--
+Tag your images
+
+docker tag gamestoreapi:latest gamestoreacr.azurecr.io/gamestoreacrapi:v1
+docker tag gamestoreclient:latest gamestoreacr.azurecr.io/gamestoreclient:v1
+
+Check
+docker images
+--
+Push images to registry
+
+docker push gamestoreacr.azurecr.io/gamestoreapi:v1
+docker push gamestoreacr.azurecr.io/gamestoreclient:v1
+--
+List images in registry
+az acr repository list --name gamestoreacr --output table
+
+
+--
+See tags
+az acr repository show-tags --name gamestoreacr --repository gamestoreclient --output table
+
+Result
+v1
+--
+Create AKS cluster with attaching ACR
+az aks create --resource-group ResourceGroup --name myAKSCluster --node-count 1 --generate-ssh-keys --attach-acr gamestoreacr
+
+--
+Install the Kubernetes CLI
+az aks install-cli
+--
+Connect to cluster using kubectl
+az aks get-credentials --resource-group ResourceGroup --name myAKSCluster
+
+To verify;
+kubectl get nodes
+kubectl get all
+--
+Check Kube Config
+
+kubectl config get-contexts
+kubectl config current-context
+kubectl config use-context gcpcluster-k8s-1
+	Switched to context "gcpcluster-k8s-1"
+--
+Deploy microservices to AKS
+
+kubectl apply -f .\aks\
+--
+Clean All AKS and Azure Resources
+
+az group delete --name ResourceGroup --yes --no-wait
