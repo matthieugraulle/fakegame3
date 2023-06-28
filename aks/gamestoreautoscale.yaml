@@ -35,4 +35,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: mongo-deployment
-  targetCPUUtilizationPercentage: 50  
+  targetCPUUtilizationPercentage: 50 

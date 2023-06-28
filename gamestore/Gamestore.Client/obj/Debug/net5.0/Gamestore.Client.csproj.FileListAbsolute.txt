@@ -1,0 +1,8 @@
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.csproj.AssemblyReference.cache
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.AssemblyInfoInputs.cache
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.AssemblyInfo.cs
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.csproj.CoreCompileInputs.cache
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.RazorAssemblyInfo.cache
+C:\Users\107098706\source\repos\GameStore\Gamestore.Client\obj\Debug\net5.0\Gamestore.Client.RazorAssemblyInfo.cs

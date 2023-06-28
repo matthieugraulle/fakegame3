@@ -17,7 +17,7 @@ az version
 az login
 --
 Create a resource group
-az group create --name ResourceGroup --locationfrancecentral
+az group create --name ResourceGroup --location westeurope
 --
 Create an Azure Container Registry
 az acr create --resource-group ResourceGroup --name gamestoreacr --sku Basic
